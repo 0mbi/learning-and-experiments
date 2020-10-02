@@ -6,7 +6,7 @@ own will do play around.
 
 ## Organization of the repo
 
-
+* `doc`: Documentation and also misc notes.
 
 ## Commit messages
 
