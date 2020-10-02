@@ -7,6 +7,9 @@ own will do play around.
 ## Organization of the repo
 
 * `doc`: Documentation and also misc notes.
+* `assets`: Binary assets like small diagrams and gifs.
+* `lang/elisp`: Elisp experiments.
+* `lang/golang`: Golang experiments.
 
 ## Commit messages
 
