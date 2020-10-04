@@ -18,11 +18,11 @@ func failOnError(err error, msg string) {
 func main() {
 	viper.SetEnvPrefix("RabbitMQ")
 	viper.SetDefault("URL", "amqp://guest:guest@localhost:5672/" )
-	viper.SetDefault("Queue-Name", "hello" )
-	viper.SetDefault("Queue-Durable", false )
-	viper.SetDefault("Queue-AutoDelete", false )
-	viper.SetDefault("Queue-Exclusive", false )
-	viper.SetDefault("Queue-NoWait", false )
+	viper.SetDefault("Queue_Name", "hello" )
+	viper.SetDefault("Queue_Durable", false )
+	viper.SetDefault("Queue_AutoDelete", false )
+	viper.SetDefault("Queue_Exclusive", false )
+	viper.SetDefault("Queue_NoWait", false )
 	viper.AutomaticEnv()
 	url := viper.GetString("URL")
 	conn, err := amqp.Dial(url)
@@ -34,11 +34,11 @@ func main() {
 	defer ch.Close()
 
 	q, err := ch.QueueDeclare(
-		viper.GetString("Queue-Name"),
-		viper.GetBool("Queue-Durable"),
-		viper.GetBool("Queue-AutoDelete"),
-		viper.GetBool("Queue-Exlusive"),
-		viper.GetBool("Queue-NoWait"),
+		viper.GetString("Queue_Name"),
+		viper.GetBool("Queue_Durable"),
+		viper.GetBool("Queue_AutoDelete"),
+		viper.GetBool("Queue_Exlusive"),
+		viper.GetBool("Queue_NoWait"),
 		nil,     // arguments
 	)
 	failOnError(err, "Failed to declare a queue")
