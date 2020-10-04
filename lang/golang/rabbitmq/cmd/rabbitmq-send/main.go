@@ -25,7 +25,6 @@ func main() {
 	viper.SetDefault("Queue-NoWait", false )
 	viper.AutomaticEnv()
 	url := viper.GetString("URL")
-	log.Fatalf("URL: %s, FOO: %s", url, viper.GetString("FOO"))
 	conn, err := amqp.Dial(url)
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
