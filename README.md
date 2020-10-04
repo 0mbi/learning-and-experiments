@@ -10,6 +10,7 @@ own will do play around.
 * `assets`: Binary assets like small diagrams and gifs.
 * `lang/elisp`: Elisp experiments.
 * `lang/golang`: Golang experiments.
+* `lang/python`: Python experiments.
 
 ## Commit messages
 
